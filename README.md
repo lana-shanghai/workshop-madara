@@ -60,6 +60,9 @@ To compile a Cairo contract, run `scarb build`.
 ## Deploying contracts 
 
 Clone [script repo](https://github.com/lana-shanghai/madara_contract_scripts)
+
+Run `npm install` and `node index.js`. This should show the last block finalized on Madara.
+
 Test deployment of pre-built contracts: 
 
 `node declare_hello_starknet.js`
