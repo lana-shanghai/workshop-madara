@@ -18,6 +18,9 @@ Check if you have it installed with `rustup toolchain list`. If not, run:
 - only on Mac 
 `xcode-select --install`
 
+- only on Linux 
+`sudo apt install -y protobuf-compiler`
+
 Clone, build, and run [Madara repository](https://github.com/keep-starknet-strange/madara)
 
 `git clone https://github.com/keep-starknet-strange/madara.git`
@@ -61,14 +64,14 @@ casm = true
 
 The above is necessary to have both `sierra` and `casm` generated. 
 
-In `src/lib.rs`, add the following code from the [erc20 contract](https://github.com/keep-starknet-strange/madara/blob/main/cairo-contracts/src/cairo_1/erc20/erc20.cairo).
+In `src/lib.cairo`, remove the Fibonacci code, and copypaste the following code from the [erc20 contract](https://github.com/keep-starknet-strange/madara/blob/main/cairo-contracts/src/cairo_1/erc20/erc20.cairo).
 
 To compile a Cairo contract, run `scarb build`.
 
 
 ## Deploying contracts 
 
-Clone [script repo](https://github.com/lana-shanghai/madara_contract_scripts)
+Clone [script repo](https://github.com/lana-shanghai/madara_contract_scripts) outside the workshop folder. 
 
 Run `npm install` and `node index.js`. This should show the last block finalized on Madara.
 
