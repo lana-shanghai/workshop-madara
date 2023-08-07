@@ -8,8 +8,12 @@ To get started, install:
 
 - nightly toolchain 
 
+Check if you have it installed with `rustup toolchain list`. If not, run:
+
 `rustup toolchain install nightly`
+
 `rustup target add wasm32-unknown-unknown --toolchain nightly`
+
 
 - only on Mac 
 `xcode-select --install`
@@ -17,15 +21,17 @@ To get started, install:
 Clone, build, and run [Madara repository](https://github.com/keep-starknet-strange/madara)
 
 `git clone https://github.com/keep-starknet-strange/madara.git`
+
 `cargo +nightly build --release`
+
 `cargo +nightly run --release -- --dev`
 
-Head to the [explorer](https://polkadot.js.org/apps/#/explorer) and verify that your local node is producing blocks!
+Head to the [explorer](https://polkadot.js.org/apps/#/explorer) and verify that your local node is producing blocks! On the left dropdown menu, at the bottom choose `Development` and connect to local node. Don't forget to click `Switch` at the top of the menu.
 
 
 ## Scarb package manager
 
-Optionally, take the pre-built contracts from the scripts. 
+For the [scripts repository](https://github.com/lana-shanghai/madara_contract_scripts), we will need to build Cairo contracts.Optionally, use the pre-built contracts from the `contracts` folder. 
 
 To build your own Cairo contracts, you will need the scarb package manager:
 
@@ -33,7 +39,7 @@ To build your own Cairo contracts, you will need the scarb package manager:
 
 There is a later version of scarb available, but for the current Cairo VM verison in Madara we require 0.5.0. 
 
-Run `mkdir workshop` && `cd workshop`.
+Run `mkdir workshop && cd workshop`.
 Inside the project folder, run `scarb init`.
 
 In `Scarb.toml`, add the following:
@@ -69,6 +75,7 @@ Run `npm install` and `node index.js`. This should show the last block finalized
 Test deployment of pre-built contracts: 
 
 `node declare_hello_starknet.js`
+
 `node deploy_hello_starknet.js`
 
 Before invoking a contract, make sure to add the contract address to the invoke script. It can be fetched from `deployResponse.contract_address`, or from the terminal.
