@@ -14,6 +14,12 @@ Check if you have it installed with `rustup toolchain list`. If not, run:
 
 `rustup target add wasm32-unknown-unknown --toolchain nightly`
 
+- Make sure you Node version is like below or above!
+
+```
+node --version   
+v18.16.0
+```
 
 - only on Mac 
 `xcode-select --install`
