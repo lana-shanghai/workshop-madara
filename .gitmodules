@@ -1,0 +1,3 @@
+[submodule "madara_contract_scripts"]
+	path = madara_contract_scripts
+	url = https://github.com/lana-shanghai/madara_contract_scripts
