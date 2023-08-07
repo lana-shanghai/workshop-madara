@@ -15,6 +15,9 @@ To get started, install:
 `xcode-select --install`
 
 Clone, build, and run [Madara repository](https://github.com/keep-starknet-strange/madara)
+
+`git clone https://github.com/keep-starknet-strange/madara.git`
+`cargo +nightly build --release`
 `cargo +nightly run --release -- --dev`
 
 Head to the [explorer](https://polkadot.js.org/apps/#/explorer) and verify that your local node is producing blocks!
