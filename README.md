@@ -64,5 +64,8 @@ Test deployment of pre-built contracts:
 
 `node declare_hello_starknet.js`
 `node deploy_hello_starknet.js`
+
+Before invoking a contract, make sure to add the contract address to the invoke script. It can be fetched from `deployResponse.contract_address`, or from the terminal.
+
 `node invoke_hello_starknet.js`
 
